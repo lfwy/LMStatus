@@ -1,0 +1,36 @@
+//
+//  李明微博.pch
+//  李明微博
+//
+//  Created by tarena on 16/1/9.
+//  Copyright © 2016年 lim. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+#import "UIImage+Image.h"
+#import "UIBarButtonItem+Item.h"
+//cell
+#define LMStatusCellMargin 10
+#define LMNameFont [UIFont systemFontOfSize:13]
+#define LMTimeFont [UIFont systemFontOfSize:12]
+#define LMSourceFont LMTimeFont
+#define LMTextFont [UIFont systemFontOfSize:15]
+#define LMScreenW [UIScreen mainScreen].bounds.size.width
+
+#define LMKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define LMLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define LMLog(...)
+
+#endif
+
+#endif
